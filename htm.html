@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,90 +6,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        body{
-            width: auto;
-            height: auto;
-        }
-        .navbar{
-            width: auto;
-            height: 10vh;
-            display: float;
-            background: red;
-            border: 5px black solid;
-        }
-        .frow{
-            width: auto;
-            height: 50vh;
-            background: green;
-            position: relative;
-            z-index: 5;
-            display: flex;
-
-        }
-        .srow{
-            width: auto;
-            height: 50vh;
-            background: yellow;
-            position: relative;
-            z-index: 2;
-            display: flex;
-            top: 50%;
-        }
-        .trow{
-            width: auto;
-            height: 50vh;
-            background: brown;
-            position: relative;
-            z-index: 2;
-            display: flex;
-            top: 50%;
-        }
-        .left{
-            width: 33%;
-            position: inherit;
-            z-index: 1;
-            display: flex;
-            height: 50vh;
-            margin-left: 0%;
-            
-            top: 0%;
-            background: ;
-            flex-direction: column;
-            border: 5px black solid;
-        }
-        .center{
-            width: 33%;
-            position: inherit;
-            z-index: 1;
-            display: flex;
-            height: 50vh;
-            margin-left: 0%;
-            
-            top: 0%;
-            background: ;
-            flex-direction: column;
-            border: 5px black solid;
-        }
-        .right{
-            width: 33%;
-            position: inherit;
-            z-index: 1;
-            display: flex;
-            height: 50vh;
-            margin-left: 0%;
-            
-            top: 0%;
-            background: ;
-            flex-direction: column;
-            border: 5px black solid;
-        }
-
-    </style>
+    <script src="main.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="navbar"></div>
-    <div class="frow">
+    <div id="frow" class="frow">
         <div class=" left">2</div>
         <div class=" center">3</div>
         <div class=" right"></div>
@@ -106,3 +29,17 @@
 
 </body>
 </html>
+<script type="text/javascript" src="links.js">
+</script>
+<script>
+
+    var linksjson = JSON.parse(linkdict);
+    // var bodyjson = JSON.parse(BodyContent);
+    var frow = document.getElementById('frow');
+    var left = frow.children[0];
+    
+    left.innerHTML=linksjson[0].first;
+    // document.write(bodyjson);
+
+</script>
+</body>

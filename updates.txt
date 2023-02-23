@@ -1,0 +1,18 @@
+Things added:
+
+added json file
+added javascript file
+added css file
+transportation of links from python to json file
+transportation of links from json to html file 
+accessing json data through javascript
+writing links from javascript to html page
+
+Things left:
+
+adding all data from python to json in dictionaries
+making javascript variables for each classes
+adding ids to all html elements for easy access to javascript
+writing to a tag href attributes all the links through loops 
+adding images to json 
+

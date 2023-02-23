@@ -1,10 +1,5 @@
-<<<<<<< HEAD
 beautifulsoup4
 requests
-=======
-Python Modules Used: 
+json
+sys
 
-Beautiful Soup 4
-Requests
-
->>>>>>> 2275db61aff24169ce1e48f9617508cc1bb3e472
