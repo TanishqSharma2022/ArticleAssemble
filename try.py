@@ -4,15 +4,43 @@ import requests
 abc="https://www.thenakedscientists.com/articles/science-news/physics"
 req = requests.get(abc)
 soup = BeautifulSoup(req.text , "html.parser")
-#print(soup.prettify)
-#x= soup.find_all( class_="panel-pane pane-views-panes pane-featured-podcast-panel-pane-8")
-x= soup.find("a")
-y= soup.a.prettify
 
-#print(x)
 
-for link in soup.find_all('a'):
-    print(link.get('href'))
 
-#print(req.content)
+links = []
 
+for classes in soup.find_all('h3', class_="field-content"):
+    for x in classes:
+        links.append("https://www.thenakedscientists.com"+x.get('href'))
+
+
+#for i in links:
+#    print(i)
+
+
+
+#for link in links:
+scraplink = "https://www.thenakedscientists.com/articles/science-news/smartphone-accurately-measures-blood-oxygen"
+newreq = requests.get(scraplink)
+soup = BeautifulSoup(newreq.text, "html.parser")
+
+for x in soup.find_all('div', class_="node-body"):
+    for i in x.children:
+        print(i)    
+
+
+
+
+"""
+
+Transporting links to json to javascript:
+
+import json
+import sys
+
+sys.stdout = open('links.js', 'w')
+
+jsonobj = json.dumps(l)
+
+print("Links = '{}'".format(jsonobj))
+"""
